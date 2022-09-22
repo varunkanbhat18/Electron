@@ -30,4 +30,17 @@ const setSensor = asyncHandler(async (req, res) => {
     }
 })
 
-export { setSensor }
+const getSensor = asyncHandler(async (req, res) => {
+
+    const sensor = await Sensor.find({})
+
+    if(sensor){
+        res.status(201).json(sensor)
+    }
+    else {
+        res.status(401)
+        throw new Error("Sensor not found")
+    }
+})
+
+export { setSensor, getSensor}
