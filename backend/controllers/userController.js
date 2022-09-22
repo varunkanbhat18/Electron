@@ -77,4 +77,17 @@ const loginUser = asyncHandler(async (req, res) => {
 }
 ) 
 
-export { registerUser, loginUser}
+const getUser = asyncHandler(async (req, res) => {
+
+    const user = await User.find({})
+
+    if(user){
+        res.status(200).json(user)
+    }
+    else {
+        res.status(401)
+        throw new Error("Not found")
+    }
+})
+
+export { registerUser, loginUser, getUser}
