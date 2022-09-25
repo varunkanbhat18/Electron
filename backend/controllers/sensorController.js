@@ -11,7 +11,7 @@ const setSensor = asyncHandler(async (req, res) => {
         throw new Error("Please fill all field")
     }
 
-    const user = await User.find({email: userEmail})
+    const user = await User.find({"email": userEmail})
 
     if(!user){
         res.status(401)
