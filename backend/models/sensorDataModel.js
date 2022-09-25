@@ -22,6 +22,6 @@ const sensorDataSchema = new mongoose.Schema({
     timestamps: true
 })
 
-const SensorData = new mongoose.Model("SensorData", sensorDataSchema)
+const SensorData = mongoose.model("SensorData", sensorDataSchema)
 
 export default SensorData
