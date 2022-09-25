@@ -1,4 +1,5 @@
 import Sensor from "../models/sensorModel.js"
+import User from "../models/userModel.js"
 import asyncHandler from "express-async-handler"
 
 const setSensor = asyncHandler(async (req, res) => {
@@ -8,6 +9,13 @@ const setSensor = asyncHandler(async (req, res) => {
     if(!sensorNo || !userEmail || !sensorName){
         res.status(401)
         throw new Error("Please fill all field")
+    }
+
+    const user = await User.find({email: userEmail})
+
+    if(!user){
+        res.status(401)
+        throw new Error("Register the user first")
     }
 
     const sensor = await Sensor.create({
