@@ -3,7 +3,7 @@ import bodyParser from "body-parser";
 import userRoutes from "./routers/userRoute.js";
 import sensorRoutes from "./routers/sensorRoute.js"
 import connectDB from "./config/db.js"
-import ErroHandler from "./middleware/errorMiddleware.js"
+import ErrorHandler from "./middleware/errorMiddleware.js"
 import _ from "lodash"
 
 const app = express()
@@ -19,7 +19,7 @@ app.use("/", userRoutes)
 
 app.use("/sensor", sensorRoutes)
 
-app.use(ErroHandler)
+app.use(ErrorHandler)
 
 app.listen(PORT, () => {
     try {
