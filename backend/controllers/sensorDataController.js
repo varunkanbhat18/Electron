@@ -6,6 +6,11 @@ const setSensorData = asyncHandler(async (req, res) => {
 
     const {sensorNo, temperature, humidity, voltage} = req.body
 
+    if(!sensorNo || !temperature || !humidity || !voltage){
+        res.status(401)
+        throw new Error("Please fill all field")
+    }
+
     const sensor = await Sensor.find({sensorNo})
 
     if(!sensor){
