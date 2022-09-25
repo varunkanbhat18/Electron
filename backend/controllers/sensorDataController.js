@@ -11,32 +11,54 @@ const setSensorData = asyncHandler(async (req, res) => {
         throw new Error("Please fill all field")
     }
 
-    const sensor = await Sensor.find({sensorNo})
+    const sensor = await Sensor.findOne({sensorNo})
 
     if(!sensor){
         res.status(401)
         throw new Error("Please register this sensor first")
     }
 
-    const sensorData = await SensorData.create({
-        sensorNo,
-        temperature,
-        humidity,
-        voltage
-    })
+    const sensorExists = await SensorData.findOne({sensorNo})
 
-    if(sensorData){
-        res.status(200).json({
-            sensorNo: sensorData.sensorNo,
-            temperature: sensorData.temperature,
-            humidity: sensorData.humidity,
-            voltage: sensorData.voltage
-        })
+    if(sensorExists){
+        
+        const sensorData = await SensorData.findOneAndUpdate({sensorNo}, {temperature, humidity, voltage})
+
+        if(sensorData){
+            res.status(200).json({
+                sensorNo: sensorData.sensorNo,
+                temperature: sensorData.temperature,
+                humidity: sensorData.humidity,
+                voltage: sensorData.voltage
+            })
+        }
+        else {
+            res.status(401)
+            throw new Error("Send the data again")
+        }
     }
     else {
-        res.status(401)
-        throw new Error("Send the data again")
+        const sensorData = await SensorData.create({
+            sensorNo,
+            temperature,
+            humidity,
+            voltage
+        })
+    
+        if(sensorData){
+            res.status(200).json({
+                sensorNo: sensorData.sensorNo,
+                temperature: sensorData.temperature,
+                humidity: sensorData.humidity,
+                voltage: sensorData.voltage
+            })
+        }
+        else {
+            res.status(401)
+            throw new Error("Send the data again")
+        }
     }
+    
 })
 
 export { setSensorData }

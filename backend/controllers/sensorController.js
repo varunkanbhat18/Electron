@@ -11,11 +11,17 @@ const setSensor = asyncHandler(async (req, res) => {
         throw new Error("Please fill all field")
     }
 
-    const user = await User.find({"email": userEmail})
+    const user = await User.findOne({email: userEmail})
+    const sensorExists = await Sensor.findOne({sensorNo})
 
     if(!user){
         res.status(401)
         throw new Error("Register the user first")
+    }
+    
+    if(!sensorExists){
+        res.status(401)
+        throw new Error("Sensor Already Registered")
     }
 
     const sensor = await Sensor.create({
