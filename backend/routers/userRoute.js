@@ -3,13 +3,13 @@ import {registerUser, loginUser, getUser} from "../controllers/userController.js
 
 const router = express.Router()
 
-router.route("/")
+router.route("/register")
     .post(registerUser)
 
 router.route("/login")
     .post(loginUser)
 
-router.route("/user")
+router.route("/")
     .get(getUser)
 
 export default router
