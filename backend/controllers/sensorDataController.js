@@ -61,4 +61,23 @@ const setSensorData = asyncHandler(async (req, res) => {
     
 })
 
-export { setSensorData }
+const getSensorData = asyncHandler(async (req, res) => {
+
+    const sensorData = await SensorData.find({})
+
+    if(sensorData){
+
+        res.status(200).json({
+            sensorNo: sensorData.sensorNo,
+            temperature: sensorData.temperature,
+            humidity: sensorData.humidity,
+            voltage: sensorData.voltage
+        })
+    }
+    else {
+        res.status(401)
+        throw new Error("Sensor Data not found")
+    }
+})
+
+export { setSensorData, getSensorData}

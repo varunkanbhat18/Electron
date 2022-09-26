@@ -15,7 +15,7 @@ const sensorDataSchema = new mongoose.Schema({
         required: [true, "Provide humidity value"]
     },
     voltage: {
-        type: Number,
+        type: String,
         required: [true, "Provide the voltage of battery"]
     }
 }, {
