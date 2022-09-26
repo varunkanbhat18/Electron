@@ -49,7 +49,7 @@ const getSensor = asyncHandler(async (req, res) => {
     const sensor = await Sensor.find({})
 
     if(sensor){
-        res.status(200).json(sensor)
+        res.status(201).json(sensor)
     }
     else {
         res.status(401)

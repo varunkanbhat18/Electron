@@ -67,7 +67,7 @@ const getSensorData = asyncHandler(async (req, res) => {
 
     if(sensorData){
 
-        res.status(200).json(sensorData)
+        res.status(201).json(sensorData)
     }
     else {
         res.status(401)
