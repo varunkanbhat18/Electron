@@ -67,12 +67,7 @@ const getSensorData = asyncHandler(async (req, res) => {
 
     if(sensorData){
 
-        res.status(200).json({
-            sensorNo: sensorData.sensorNo,
-            temperature: sensorData.temperature,
-            humidity: sensorData.humidity,
-            voltage: sensorData.voltage
-        })
+        res.status(200).json(sensorData)
     }
     else {
         res.status(401)
