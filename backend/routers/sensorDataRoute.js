@@ -6,7 +6,7 @@ const router = express.Router()
 router.route("/")
     .post(setSensorData)
 
-router.route("/info")
+router.route("/sensorinfo")
     .get(getSensorData)
 
 export default router
