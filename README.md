@@ -1,6 +1,6 @@
 # Electron - EV Battery Monitoring System with Solar Powered Charging
 ## Problem Analysis
-Despite advances in technology, there has not been any system developed to monitor the battery health for Electric vehicles and even any method for solar based charging. Due to certain criteria, there are many cases of battery exploding and unhealthy battery conditions. There are also situations for EV vehicles discharging and waiting in long queues for charging the battery. Hence a system is being developed for monitoring the battery health and maintaining the temperature, humidity and voltage of the battery. Also, a battery swapping technique being developed for charging the battery with solar power and then using it as a replacement for the existing battery.
+Despite advances in technology, there has not been many systems developed to monitor the battery health for Electric vehicles and even any effective method for solar based charging. Due to certain criteria, there are many cases of battery exploding and unhealthy battery conditions. There are also situations for EV vehicles discharging and waiting in long queues for charging the battery. Hence a system is being developed for monitoring the battery health and maintaining the temperature, humidity and voltage of the battery. Also, a battery swapping technique being developed for charging the battery with solar power and then using it as a replacement for the existing battery.
 
 ##	Objectives
 The objectives of this project are to :   
