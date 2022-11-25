@@ -39,3 +39,4 @@ In the Electron, we charged the discharged battery with the help of Solar panel 
 ## Preliminary Results
 <img src="https://github.com/varunkanbhat18/Electron/blob/master/Assets/BMS.jpg" width=25% height=25%>
 <img src="https://github.com/varunkanbhat18/Electron/blob/master/Assets/Solar1.jpg" width=25% height=25%>
+<img src="https://github.com/varunkanbhat18/Electron/blob/master/Assets/Electron.png" width=75% height=75%>
