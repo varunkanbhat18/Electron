@@ -37,6 +37,8 @@ In the Electron, we charged the discharged battery with the help of Solar panel 
 **ThingSpeak -** ThingSpeak is an IoT analytics platform service that allows you to aggregate, visualize and analyze live data streams in the cloud. ThingSpeak provides instant visualizations of data posted by your devices to ThingSpeak. With the ability to execute MATLAB® code in ThingSpeak you can perform online analysis and processing of the data as it comes in. ThingSpeak is often used for prototyping and proof of concept IoT systems that require analytics.
 
 ## Preliminary Results
-<img src="https://github.com/varunkanbhat18/Electron/blob/master/Assets/BMS.jpg" width=25% height=25%>
-<img src="https://github.com/varunkanbhat18/Electron/blob/master/Assets/Solar1.jpg" width=25% height=25%>
-<img src="https://github.com/varunkanbhat18/Electron/blob/master/Assets/Electron.png" width=75% height=75%>
+<p align="center">
+  <img src="https://github.com/varunkanbhat18/Electron/blob/master/Assets/BMS.jpg" width=40% height=40%>
+  <img src="https://github.com/varunkanbhat18/Electron/blob/master/Assets/Solar1.jpg" width=35.8% height=35.8%>
+  <img align="center" src="https://github.com/varunkanbhat18/Electron/blob/master/Assets/Electron.png" width=90% height=90%>
+</p>
