@@ -35,3 +35,7 @@ In the Electron, we charged the discharged battery with the help of Solar panel 
 **Render -** Render is a unified cloud to build and run all your apps and websites with free TLS certificates, a global CDN, DDoS protection, private networks, and auto deploys from Git.
 
 **ThingSpeak -** ThingSpeak is an IoT analytics platform service that allows you to aggregate, visualize and analyze live data streams in the cloud. ThingSpeak provides instant visualizations of data posted by your devices to ThingSpeak. With the ability to execute MATLAB® code in ThingSpeak you can perform online analysis and processing of the data as it comes in. ThingSpeak is often used for prototyping and proof of concept IoT systems that require analytics.
+
+## Preliminary Results
+<img src="https://github.com/varunkanbhat18/Electron/blob/master/Assets/BMS.jpg" width=25% height=25%>
+<img src="https://github.com/varunkanbhat18/Electron/blob/master/Assets/Solar1.jpg" width=25% height=25%>
